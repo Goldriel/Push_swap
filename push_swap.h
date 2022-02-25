@@ -14,6 +14,7 @@ typedef struct s_stack
 	bool	keep;
 	void	*next;
 }	t_stack;
+
 typedef struct s_stacks
 {
 	t_stack	a;
@@ -21,7 +22,7 @@ typedef struct s_stacks
 }	t_stacks;
 
 /*
- * utils function
+ ** utils function
  */
 
 char	**ft_split(char const *s, char c);
@@ -30,5 +31,12 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlen(const char *c);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 char	*ft_strdup(const char *s1);
+char	*ft_strjoin(char const *s1, char const *s2);
+
+/*
+** verificet argv
+*/
+
+char    **read_args(int argc, char **argv);
 
 #endif
