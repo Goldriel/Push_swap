@@ -1,4 +1,24 @@
-#include"push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils_2.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/27 18:47:32 by jarrakis          #+#    #+#             */
+/*   Updated: 2022/02/27 20:30:57 by jarrakis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "push_swap.h"
+
+int	ft_isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
+}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -11,7 +31,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
 	new_str = (char *)malloc(sizeof(char) * \
-	 (ft_strlen(s1) + ft_strlen(s2) + 1));
+	(ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (new_str == NULL)
 		return (NULL);
 	while (i < ft_strlen(s1))
@@ -27,4 +47,25 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	new_str[i] = '\0';
 	return (new_str);
+}
+
+void	clear_twise_arr(char	**arr)
+{
+	int	i;
+	int	len;
+
+	len = 0;
+	i = 0;
+	if (arr == NULL)
+		return ;
+	while (arr[len] != NULL)
+		len++;
+	while (i < len)
+	{
+		free(arr[i]);
+		arr[i] = NULL;
+		i++;
+	}
+	free (arr);
+	arr = NULL;
 }

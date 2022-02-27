@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/27 18:48:13 by jarrakis          #+#    #+#             */
+/*   Updated: 2022/02/27 20:30:55 by jarrakis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
@@ -32,11 +43,15 @@ size_t	ft_strlen(const char *c);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 char	*ft_strdup(const char *s1);
 char	*ft_strjoin(char const *s1, char const *s2);
+void	clear_twise_arr(char	**arr);
+int		ft_isdigit(int c);
 
 /*
 ** verificet argv
 */
 
-char    **read_args(int argc, char **argv);
+char	**read_args(int argc, char **argv);
+void	validate_argv(char	**argv);
+bool	valid_parm(char **argv);
 
 #endif

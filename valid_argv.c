@@ -1,33 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   valid_argv.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/27 18:48:28 by jarrakis          #+#    #+#             */
-/*   Updated: 2022/02/27 20:15:12 by jarrakis         ###   ########.fr       */
+/*   Created: 2022/02/27 20:17:45 by jarrakis          #+#    #+#             */
+/*   Updated: 2022/02/27 20:43:29 by jarrakis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+static bool	is_num(char **argv)
 {
-	t_stacks	stacks;
-	char		**argv_split;
-	int			i;
+	int	par;
+	int	num;
 
-	i = 0;
-	if (argc < 2)
-		exit(print_error());
-	else
+	par = 0;
+	while (argv[par] != NULL)
 	{
-		argv_split = read_args(argc, argv);
-		while (i < 3)
+		num = 0;
+		if (argv[par][num] == '-')
+			num++;
+		if (ft_isdigit(argv[par][num]) == false)
+			return (false);
+		while (argv[par][num] != NULL)
 		{
-			printf ("%s\n", argv_split[i]);
-			i++;
+			if (ft_isdigit(argv[par][num] == false))
+				return (false);
+			num++;
 		}
+		par++;
 	}
+	return (true);
+}
+
+bool	valid_parm(char **argv)
+{
+	if (is_num(argv) == false)
+		return (false);
+	return (true);
 }
