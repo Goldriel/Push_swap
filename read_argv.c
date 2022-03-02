@@ -14,6 +14,11 @@
 
 void	validate_argv(char	**argv)
 {
+    if (valid_parm(argv) == false)
+    {
+        clear_twise_arr(argv);
+        exit(print_error());
+    }
 }
 
 char	**read_args(int argc, char **argv)

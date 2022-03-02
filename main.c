@@ -24,10 +24,6 @@ int	main(int argc, char **argv)
 	else
 	{
 		argv_split = read_args(argc, argv);
-		while (i < 3)
-		{
-			printf ("%s\n", argv_split[i]);
-			i++;
-		}
+        validate_argv(argv_split);
 	}
 }
