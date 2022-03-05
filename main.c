@@ -25,5 +25,6 @@ int	main(int argc, char **argv)
 	{
 		argv_split = read_args(argc, argv);
         validate_argv(argv_split);
+        creat_staks(argv_split, &stacks);
 	}
 }

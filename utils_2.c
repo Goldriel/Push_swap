@@ -82,3 +82,20 @@ int	ft_strcmp(const char *s1, const char *s2)
     }
     return (0);
 }
+
+void	*ft_calloc(size_t num, size_t size)
+{
+    void	*memory;
+    size_t	i;
+
+    i = 0;
+    memory = malloc(num * size);
+    if (memory == NULL)
+        return (NULL);
+    while (i < num * size)
+    {
+        ((unsigned char *)memory)[i] = 0;
+        i++;
+    }
+    return ((void *)memory);
+}
