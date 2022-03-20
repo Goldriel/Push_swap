@@ -14,7 +14,14 @@
 # define PUSH_SWAP_H
 
 # include <stdlib.h>
-# include <unistd.h>
+/*
+** Unix lib
+*/
+//# include <unistd.h>
+/*
+** Win lib analog unistd.h
+*/
+# include <io.h>
 # include <stdbool.h>
 # include <stdio.h> // delite
 
@@ -73,4 +80,6 @@ t_node *newnode(int num);
 void    nodeadd_back(t_node **lst, t_node *new);
 void    clear_stacks(t_stacks *stacks);
 void    exit_program(t_stacks *stacks);
+
+bool	is_sorted(t_stacks* stacks);
 #endif

@@ -12,6 +12,12 @@
 
 #include "push_swap.h"
 
+static void	algoritm(t_stacks* stacks)
+{
+	if (is_sorted(stacks))
+		return;
+}
+
 int	main(int argc, char **argv)
 {
 	t_stacks	stacks;
@@ -26,5 +32,7 @@ int	main(int argc, char **argv)
 		argv_split = read_args(argc, argv);
         validate_argv(argv_split);
         creat_staks(argv_split, &stacks);
+		clear_twise_arr(argv_split);
+
 	}
 }

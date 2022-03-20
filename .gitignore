@@ -50,3 +50,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+.vs/
+Push_swap.sln
+Push_swap.vcxproj
+Push_swap.vcxproj.filtres
+Push_swap.vcxproj.user
+Push_swap.vcxproj.filters
