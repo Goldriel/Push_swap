@@ -6,7 +6,7 @@
 /*   By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 18:48:13 by jarrakis          #+#    #+#             */
-/*   Updated: 2022/03/05 01:50:27 by jarrakis         ###   ########.fr       */
+/*   Updated: 2022/03/25 19:47:10 by jarrakis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 /*
 ** Unix lib
 */
-//# include <unistd.h>
+# include <unistd.h>
 /*
 ** Win lib analog unistd.h
 */
-# include <io.h>
+//# include <io.h>
 # include <stdbool.h>
 # include <stdio.h> // delite
 
@@ -80,8 +80,8 @@ char	*ft_strdup(const char *s1);
 char	*ft_strjoin(char const *s1, char const *s2);
 void	clear_twise_arr(char	**arr);
 int		ft_isdigit(int c);
-int	ft_strcmp(const char *s1, const char *s2);
-int	ft_atoi(const char *str);
+int		ft_strcmp(const char *s1, const char *s2);
+int		ft_atoi(const char *str);
 void	*ft_calloc(size_t num, size_t size);
 
 /*
@@ -96,15 +96,15 @@ bool	valid_parm(char **argv);
  ** creat and bild stack
  */
 
-void    creat_staks(char **argv, t_stacks *stacks);
-t_node *newnode(int num);
-void    nodeadd_back(t_node **lst, t_node *new);
-void    nodeadd_front(t_node** lst, t_node* new);
-t_node* nodelast(t_node* lst);
-void    clear_stacks(t_stacks *stacks);
-void    exit_program(t_stacks *stacks);
+void	creat_staks(char **argv, t_stacks *stacks);
+t_node	*newnode(int num);
+void	nodeadd_back(t_node **lst, t_node *new);
+void	nodeadd_front(t_node **lst, t_node *new);
+t_node	*nodelast(t_node *lst);
+void	clear_stacks(t_stacks *stacks);
+void	exit_program(t_stacks *stacks);
 
-bool	is_sorted(t_stacks* stacks);
-bool	operations(char* op, t_stacks* stacks);
-bool	push(t_stack* to, t_stack* from);
+bool	is_sorted(t_stacks *stacks);
+bool	operations(char *op, t_stacks *stacks);
+bool	push(t_stack *to, t_stack *from);
 #endif

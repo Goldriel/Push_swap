@@ -6,19 +6,19 @@
 /*   By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 18:46:50 by jarrakis          #+#    #+#             */
-/*   Updated: 2022/02/27 20:50:59 by jarrakis         ###   ########.fr       */
+/*   Updated: 2022/03/25 20:24:07 by jarrakis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include"push_swap.h"
 
 void	validate_argv(char	**argv)
 {
-    if (valid_parm(argv) == false)
-    {
-        clear_twise_arr(argv);
-        exit(print_error());
-    }
+	if (valid_parm(argv) == false)
+	{
+		clear_twise_arr(argv);
+		exit(print_error());
+	}
 }
 
 char	**read_args(int argc, char **argv)

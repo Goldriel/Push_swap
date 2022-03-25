@@ -6,7 +6,7 @@
 /*   By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 18:47:32 by jarrakis          #+#    #+#             */
-/*   Updated: 2022/02/27 20:30:57 by jarrakis         ###   ########.fr       */
+/*   Updated: 2022/03/25 20:25:21 by jarrakis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,33 +69,34 @@ void	clear_twise_arr(char	**arr)
 	free (arr);
 	arr = NULL;
 }
+
 int	ft_strcmp(const char *s1, const char *s2)
 {
-    int	i;
+	int	i;
 
-    i = 0;
-    while ((s1[i] != '\0' || s2[i] != '\0'))
-    {
-        if (s1[i] != s2[i])
-            return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-        i++;
-    }
-    return (0);
+	i = 0;
+	while ((s1[i] != '\0' || s2[i] != '\0'))
+	{
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
+	}
+	return (0);
 }
 
 void	*ft_calloc(size_t num, size_t size)
 {
-    void	*memory;
-    size_t	i;
+	void	*memory;
+	size_t	i;
 
-    i = 0;
-    memory = malloc(num * size);
-    if (memory == NULL)
-        return (NULL);
-    while (i < num * size)
-    {
-        ((unsigned char *)memory)[i] = 0;
-        i++;
-    }
-    return ((void *)memory);
+	i = 0;
+	memory = malloc(num * size);
+	if (memory == NULL)
+		return (NULL);
+	while (i < num * size)
+	{
+		((unsigned char *)memory)[i] = 0;
+		i++;
+	}
+	return ((void *)memory);
 }

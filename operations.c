@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   operations.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/25 19:42:30 by jarrakis          #+#    #+#             */
+/*   Updated: 2022/03/25 19:42:39 by jarrakis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 bool	operations(char *op, t_stacks *stacks)
@@ -21,5 +33,5 @@ bool	operations(char *op, t_stacks *stacks)
 		valid = true;
 	if (!ft_strcmp(op, "rrb") || !ft_strcmp(op, "rrr"))
 		valid = true;
-	return (valid)
+	return (valid);
 }

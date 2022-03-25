@@ -6,16 +6,16 @@
 /*   By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 18:48:28 by jarrakis          #+#    #+#             */
-/*   Updated: 2022/02/27 20:15:12 by jarrakis         ###   ########.fr       */
+/*   Updated: 2022/03/25 19:41:05 by jarrakis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	algoritm(t_stacks* stacks)
+static void	algoritm(t_stacks *stacks)
 {
 	if (is_sorted(stacks))
-		return;
+		return ;
 }
 
 int	main(int argc, char **argv)
@@ -30,12 +30,11 @@ int	main(int argc, char **argv)
 	else
 	{
 		argv_split = read_args(argc, argv);
-        validate_argv(argv_split);
-        creat_staks(argv_split, &stacks);
+		validate_argv(argv_split);
+		creat_staks(argv_split, &stacks);
 		clear_twise_arr(argv_split);
 		algoritm(&stacks);
 		clear_stacks(&stacks);
 	}
 	return (0);
 }
-
