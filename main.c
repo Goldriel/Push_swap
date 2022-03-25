@@ -33,6 +33,9 @@ int	main(int argc, char **argv)
         validate_argv(argv_split);
         creat_staks(argv_split, &stacks);
 		clear_twise_arr(argv_split);
-
+		algoritm(&stacks);
+		clear_stacks(&stacks);
 	}
+	return (0);
 }
+

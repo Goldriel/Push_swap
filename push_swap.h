@@ -25,6 +25,9 @@
 # include <stdbool.h>
 # include <stdio.h> // delite
 
+# define MIN_INT -2147483648
+# define MAX_INT 2147483647
+
 typedef struct s_node
 {
 	int		num;
@@ -45,6 +48,24 @@ typedef struct s_stacks
 	t_stack	a;
 	t_stack	b;
 }	t_stacks;
+
+typedef struct s_info
+{
+	char	op[4];
+	bool	top;
+	int		n_op;
+	int		ind;
+	int		size;
+}	t_info;
+
+typedef struct s_actions
+{
+	t_info	a;
+	t_info	b;
+	int		total;
+	char	op_same[4];
+	int		n_op_same;
+}	t_actions;
 
 /*
  ** utils function
@@ -78,8 +99,12 @@ bool	valid_parm(char **argv);
 void    creat_staks(char **argv, t_stacks *stacks);
 t_node *newnode(int num);
 void    nodeadd_back(t_node **lst, t_node *new);
+void    nodeadd_front(t_node** lst, t_node* new);
+t_node* nodelast(t_node* lst);
 void    clear_stacks(t_stacks *stacks);
 void    exit_program(t_stacks *stacks);
 
 bool	is_sorted(t_stacks* stacks);
+bool	operations(char* op, t_stacks* stacks);
+bool	push(t_stack* to, t_stack* from);
 #endif

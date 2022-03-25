@@ -12,6 +12,18 @@
 
 #include"push_swap.h"
 
+t_node* nodelast(t_node* lst)
+{
+    t_node* last;
+
+    if (!lst)
+        return (NULL);
+    last = lst;
+    while (last->next)
+        last = last->next;
+    return (last);
+}
+
 t_node *newnode(int num)
 {
     t_node  *elm;
@@ -28,7 +40,7 @@ void    nodeadd_back(t_node **lst, t_node *new)
 {
     t_node *tmp;
 
-    tmp = *tmp;
+    tmp = *lst;
     if (new == NULL)
         return ;
     if (*lst == NULL)
@@ -39,6 +51,15 @@ void    nodeadd_back(t_node **lst, t_node *new)
             tmp = tmp->next;
         tmp->next = new;
     }
+}
+
+void    nodeadd_front(t_node** lst, t_node* new)
+{
+    if (!new)
+        return ;
+    if (*lst)
+        new->next = *lst;
+    *lst = new;
 }
 
 void    creat_staks(char **argv, t_stacks *stacks)
