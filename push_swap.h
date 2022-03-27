@@ -6,7 +6,7 @@
 /*   By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 18:48:13 by jarrakis          #+#    #+#             */
-/*   Updated: 2022/03/25 19:47:10 by jarrakis         ###   ########.fr       */
+/*   Updated: 2022/03/27 19:07:59 by jarrakis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,4 +107,7 @@ void	exit_program(t_stacks *stacks);
 bool	is_sorted(t_stacks *stacks);
 bool	operations(char *op, t_stacks *stacks);
 bool	push(t_stack *to, t_stack *from);
+bool	swap(t_stack *stack);
+bool	rotate(t_stack *stack);
+bool	reverse_rotate(t_stack *stack);
 #endif
